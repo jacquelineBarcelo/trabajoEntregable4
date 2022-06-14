@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    background-color: #bebebe;
+    font-family: sans-serif;
+
+}
+
+.photo img {
+    width: 200px;
+    height: 100px;
+    padding: 5px;
+    border: solid 1px #001a3b;
+}
+
+.text h3 {
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #000000;
+}
+
+.nav :hover {
+    transform: scale(1.2);
+    transition: 1s;
+
+}
+
+.nav li :hover {
+    background-color: #bebebe;
+
+}
+
+.nav a :hover {
+    color: white;
+
+}
+
+.header {
+    justify-content: center;
+    padding: 20px;
+}
+
+.header img {
+    width: 70px;
+    height: 50px;
+    float: left;
+    /* transform: translate(50px, 10px); */
+}
+
+.header section {
+    margin-top: 50px;
+
+}
+
+.containerIndex {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        "header"
+        "nav"
+        "photo"
+        "text"
+        "footer";
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    font-weight: 4;
+}
+
+.photo {
+    grid-area: photo;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.text {
+    grid-area: text;
+    /* font-size: 200px; */
+    text-align: center;
+    align-items: center;
+}
+
+
+.header {
+    grid-area: header;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-family: 'Tiro Gurmukhi', serif;
+    background-color: #000000;
+    /* background-image: linear-gradient(to left, black,  #bebebe); */
+    background-image: linear-gradient(to bottom, black, #bebebe);
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.nav li {
+    padding: 2px;
+    border: solid 4px #000000;
+    list-style: none;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+
+@media(min-width: 425px) {
+    .containerIndex {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "header"
+            "nav"
+            "photo"
+            "text"
+            "footer";
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: #000000;
+        color: white;
+        text-align: center;
+        font-weight: 4;
+    }
+
+    .photo {
+        grid-area: photo;
+        text-align: center;
+    }
+
+    .text {
+        grid-area: text;
+        display: flex;
+        margin: 20px;
+        font-size: 15px;
+        text-align: center;
+        align-items: center;
+    }
+
+
+    .header {
+        grid-area: header;
+        text-align: center;
+        color: white;
+        padding: 10px;
+        font-family: 'Tiro Gurmukhi', serif;
+        background-color: #000000;
+        /* border: solid 1px #010f4e; */
+    }
+
+    .nav {
+        grid-area: nav;
+    }
+
+    .nav li {
+        padding: 2px;
+        border: solid 4px #000000;
+        list-style: none;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: white;
+    }
+
+}
+
+@media(min-width: 768px) {
+    .containerIndex {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+            "header header header nav"
+            "photo photo photo nav"
+            "text text text nav"
+            "footer footer footer nav";
+    }
+
+    .nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .photo img {
+        width: 500px;
+        height: 200px;
+    }
+
+    .nav li {
+        padding: 20px;
+        margin: 30px auto;
+    }
+}
